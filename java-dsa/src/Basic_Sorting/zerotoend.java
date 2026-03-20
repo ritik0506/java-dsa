@@ -1,9 +1,8 @@
 package Basic_Sorting;
 
-
 import java.util.Scanner;
 
-public class bubblesortdescendingorder {
+public class zerotoend {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             System.out.println("enter teh Size of the array");
@@ -13,22 +12,23 @@ public class bubblesortdescendingorder {
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = sc.nextInt();
             }
-
-            for(int i=0;i<arr.length-1;i++){
-                int swap=0;
-                for(int j=0;j<arr.length-i-1; j++){
-                    if (arr[j] < arr[j+1]) {
-                        int temp = arr[j];
-                        arr[j] = arr[j+1];
-                        arr[j+1] = temp;
-                        swap++;
-                    }
+            int [] arr1= new int[n];
+            int x=0;
+            int y= arr.length-1;
+            int i=0;
+            while(i< arr.length){
+                if(arr[i]!=0){
+                    arr1[x]=arr[i];
+                    x++;
+                }else {
+                    arr1[y]=0;
+                    y--;
                 }
-                if(swap==0) break;
+                i++;
             }
-            for(int ele: arr){
+            for(int ele: arr1){
                 System.out.println(ele);
             }
-        }
-    }
+            }
 
+        }
